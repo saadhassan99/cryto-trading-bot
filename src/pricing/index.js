@@ -43,19 +43,19 @@ module.exports = {
     
         return data
     },
-    getSpotPrice: async => new Promise((resolve, reject) => {
+    getSpotPrice: async () => new Promise((resolve, reject) => {
         const currencyPair = currency
         client.getSpotPrice({currencyPair}, (err, obj) => {
             err ? reject(err) : resolve(obj.data)
         })
     }),
-    getBuyPrice: async => new Promise((resolve, reject) =>{
+    getBuyPrice: async () => new Promise((resolve, reject) =>{
         const currencyPair = currency
         client.getBuyPrice({currencyPair}, (err, obj) => {
             err ? reject(err) : resolve(obj.data)
         })
     }),
-    getSellPrice: async => new Promise((resolve, reject) => {
+    getSellPrice: async () => new Promise((resolve, reject) => {
         const currencyPair = currency
         client.getSellPrice({currencyPair}, (err, obj) => {
             err ? reject(err) : resolve(obj.data)
